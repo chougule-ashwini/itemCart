@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0, 
+        "name": "Canon EOD 20D", 
+        "category": "Camera", 
+        "price": 20000, 
+        "availability": 3
+    }, 
+    {
+        "id": 2, 
+        "name": "Adidas Light Runner Juice It", 
+        "category": "Shoes", 
+        "price": 2000, 
+        "availability": 2
+    }, 
+    {
+        "id": 3, 
+        "name": "Real Apple", 
+        "category": "Juice", 
+        "price": 50, 
+        "availability": 6
+    }
+]
