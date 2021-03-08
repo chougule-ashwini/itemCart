@@ -1,0 +1,15 @@
+<p>Search: <input ng-model="$ctrl.search" /></p>
+<table class="table table-bordered">
+    <tr>
+      <th>Item Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Available Quantity</th>
+    </tr>
+    <tr ng-repeat="item in $ctrl.items | filter:$ctrl.search">
+      <td>{{item.name}}</td>
+      <td>{{item.category}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.availability}}</td>
+    </tr>
+  </table>

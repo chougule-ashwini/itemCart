@@ -1,14 +1,28 @@
 <!doctype html>
-<html lang="en" ng-app>
-  <head>
-    <meta charset="utf-8">
-    <title>My HTML File</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <script src="lib/angular/angular.js"></script>
-  </head>
-  <body>
+<html lang="en" ng-app="itemCartApp">
 
-    <p>Nothing here {{'yet' + '!'}}</p>
+<head>
+  <meta charset="utf-8">
+  <title>My HTML File</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  <script src="lib/angular/angular.js"></script>
+  <link rel="stylesheet" href="app.css" />
+  <script src="app.js"></script>
+  <script src="item-list/item-list.component.js"></script>
+</head>
 
-  </body>
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><h2>Item Cart Test</h2></li>
+        <li><a href="#!/">Items</a></li>
+        <li><a href="#!/cart">Cart</a></li>
+      </ul>
+    </nav>
+    <!-- Use a custom component to render a list of items -->
+    <item-list></item-list>
+  </div>
+</body>
+
 </html>
