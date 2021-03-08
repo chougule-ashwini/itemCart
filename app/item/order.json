@@ -2,9 +2,10 @@
     {
         "id":1,
         "order":[{
-            "itemId":1,
+            "name":"Adidas Light Runner Juice It",
+            "price":2000,
             "quantity":1
         }],
-        "bill":20000
+        "bill":2000
     }
 ]

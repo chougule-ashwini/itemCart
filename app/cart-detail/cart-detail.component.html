@@ -1,0 +1,21 @@
+<h4>Your Cart <small class="pull-right"><a href="#!/">Continue shopping</a></small></h4>
+<section ng-if="currentOrder">
+  <form name="myForm">
+    <table class="table table-bordered">
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+      <tr ng-repeat="orderItem in currentOrder.order">
+        <td>{{orderItem.name}}</td>
+        <td>{{orderItem.price}}</td>
+        <td><input type="number" min="1" max="{{orderItem.availability}}" ng-change="updateBill()" ng-model="orderItem.quantity" required>
+        <p ng-if="myForm.orderItem.quantity.$valid">Please enter value less or equal to {{orderItem.availability}}.</p></td>
+      </tr>
+    </table>
+
+    <p><strong>Bill:</strong> Rs.<span>{{currentOrder.bill}}</span></p>
+    <button ng-click="placeOrder()" ng-disabled="myForm.$invalid">Place Order</button>
+  </form>
+</section>

@@ -1,14 +1,10 @@
 'use strict';
-
-// Register `itemList` component, along with its associated controller and template
 angular.
   module('itemCartApp').
-  component('itemList', {
-    templateUrl: 'item-list/item-list.component.html',
-    controller: function ItemListController($http) {
-      let self = this;
-      $http.get('item/item.json').then(function (response) {
-        self.items = response.data;
-      });
+  controller("ItemListController", function ($scope,$rootScope,CartService) {
+    $scope.items = $rootScope.items;
+    $scope.addToCart = function (item) {
+      CartService.addToCart(item);
+      CartService.calculateBill();
     }
   });

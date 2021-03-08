@@ -11,3 +11,6 @@ nav li{
     padding: 10px;
     line-height: 24px;
 }
+input.ng-invalid {
+  border-color: red;
+}

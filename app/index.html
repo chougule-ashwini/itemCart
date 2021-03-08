@@ -6,9 +6,12 @@
   <title>My HTML File</title>
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
   <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.js"></script>
   <link rel="stylesheet" href="app.css" />
-  <script src="app.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
   <script src="item-list/item-list.component.js"></script>
+  <script src="cart-detail/cart-detail.component.js"></script>
 </head>
 
 <body>
@@ -20,8 +23,7 @@
         <li><a href="#!/cart">Cart</a></li>
       </ul>
     </nav>
-    <!-- Use a custom component to render a list of items -->
-    <item-list></item-list>
+    <div ng-view></div>
   </div>
 </body>
 
